@@ -1,25 +1,96 @@
-# FloraVision - Plant E-Commerce Website
+# 🌿 FloraVision — Plant E-Commerce Landing Page
 
-A dark-themed plant e-commerce landing page built with **Next.js** and **Tailwind CSS**, faithfully implementing the Figma design.
+A dark-themed, mobile-first plant e-commerce landing page built with **Next.js 14** and **Tailwind CSS**, faithfully implementing a Figma design — no UI kits used.
+
+🔗 **Live Demo → [floravision-nine.vercel.app](https://floravision-nine.vercel.app/)**
+
+---
+
+## Preview
+
+> Dark green aesthetic · Mobile-first · Pixel-accurate Figma implementation
+
+---
 
 ## Tech Stack
-- **Next.js 14** (App Router)
-- **Tailwind CSS** (no UI kits)
-- **React 18**
+
+| Technology | Details |
+|---|---|
+| **Next.js 14** | App Router |
+| **Tailwind CSS** | Utility-first, no UI kits |
+| **React 18** | Functional components + hooks |
+| **Vercel** | Deployment |
+
+---
+
+## Features
+
+- Pixel-accurate Figma-to-code implementation
+- Mobile-first responsive layout (`max-w-[430px]` base)
+- Fixed navbar with hamburger/drawer navigation
+- O2 plants carousel with dot pagination
+- Product cards with hover transitions & cart buttons
+- Customer review section
+- Newsletter subscribe form in footer
+- Accessible — semantic HTML, `aria` labels, focus indicators, keyboard navigable
+- No UI kits — pure Tailwind CSS only
+
+---
+
+## Sections
+
+| Section | Description |
+|---|---|
+| `Navbar` | Fixed top nav with logo, links, search, wishlist, cart |
+| `Hero` | Full-height hero with plant visual, floating product card, review snippet |
+| `TrendyPlants` | Horizontal list cards for trending plants |
+| `TopSelling` | 3-column product grid with cart buttons |
+| `CustomerReview` | Review cards with star ratings |
+| `BestO2` | O2 plants carousel with dot indicators |
+| `Footer` | Links, newsletter form |
+
+---
+
+## Project Structure
+
+```
+floravision/
+├── app/
+│   ├── globals.css         # Tailwind base styles
+│   ├── layout.jsx          # Root layout with metadata
+│   └── page.jsx            # Main page — assembles all sections
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── TrendyPlants.jsx
+│   ├── TopSelling.jsx
+│   ├── CustomerReview.jsx
+│   ├── BestO2.jsx
+│   └── Footer.jsx
+├── tailwind.config.js
+├── postcss.config.js
+└── next.config.js
+```
+
+---
 
 ## Getting Started
 
 ### Prerequisites
 - Node.js 18+
-- npm or yarn
+- npm
 
 ### Installation
 
 ```bash
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/floravision.git
+cd floravision
+
 # Install dependencies
 npm install
 
-# Run development server
+# Start dev server
 npm run dev
 ```
 
@@ -32,39 +103,11 @@ npm run build
 npm start
 ```
 
-## Project Structure
+---
 
-```
-floravision/
-├── app/
-│   ├── globals.css       # Tailwind base styles
-│   ├── layout.jsx        # Root layout with metadata
-│   └── page.jsx          # Main page (assembles all sections)
-├── components/
-│   ├── Navbar.jsx         # Fixed navbar with mobile hamburger drawer
-│   ├── Hero.jsx           # Hero section with plant image + review card
-│   ├── TrendyPlants.jsx   # Horizontal trendy plant cards
-│   ├── TopSelling.jsx     # 2x3 grid of top selling plants
-│   ├── CustomerReview.jsx # 3-column customer review cards
-│   ├── BestO2.jsx         # O2 plants carousel with pagination
-│   └── Footer.jsx         # Footer with newsletter subscribe
-├── preview.html           # Standalone HTML preview (no build needed)
-├── tailwind.config.js
-├── postcss.config.js
-└── next.config.js
-```
+## Deployment
 
-## Features
+Deployed on **Vercel** — connected to the GitHub repo for automatic deploys on every push to `main`.
 
-- Responsive layout (320px–1440px)
-- Mobile hamburger/drawer navigation
-- Smooth hover transitions on all interactive elements
-- Accessible: semantic HTML, alt text, aria labels, focus indicators
-- Keyboard-navigable
-- O2 plants carousel with dot indicators
-- Newsletter subscribe form
-- No UI kits — pure Tailwind CSS only
+---
 
-## Preview Without Build
-
-Open `preview.html` directly in any browser for an instant preview without installing dependencies.
