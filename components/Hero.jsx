@@ -3,16 +3,20 @@
 export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden" style={{ backgroundColor: '#1a2e1a', minHeight: '100svh' }}>
-      {/* Full background plant image */}
-      <img
-        src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=800&q=80"
-        alt=""
-        aria-hidden="true"
-        className="w-full h-full object-cover"
-        style={{ filter: 'brightness(0.65) saturate(1.2)' }}
-      />
-      {/* dark overlay gradient from bottom only */}
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(26,46,26,0.1) 0%, rgba(26,46,26,0.3) 40%, rgba(26,46,26,0.92) 100%)' }} />
+
+      {/* Subtle dark gradient overlay — no background photo */}
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(18,32,18,0.95) 0%, rgba(26,46,26,0.85) 60%, rgba(26,46,26,0.5) 100%)' }} />
+
+      {/* Big plant PNG — right side, transparent background */}
+      <div className="absolute right-0 bottom-0 h-full flex items-end pointer-events-none" style={{ width: '55%' }}>
+        <img
+          src="https://images.pexels.com/photos/3125195/pexels-photo-3125195.jpeg?w=600"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-left"
+          style={{ maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%)', WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%)' }}
+        />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-[430px] mx-auto px-4 pt-20 pb-8 flex flex-col min-h-[100svh]">
@@ -24,7 +28,7 @@ export default function Hero() {
             <div className="text-[#f5f0e8] text-xs font-medium mb-2">Aglaonema plant</div>
             <div className="w-full h-20 rounded-lg overflow-hidden bg-[#1e3520]/40 mb-2">
               <img
-                src="https://images.unsplash.com/photo-1591958911259-bee2173bdab4?w=160&h=120&fit=crop"
+                src="https://images.pexels.com/photos/3125195/pexels-photo-3125195.jpeg?w=160&h=120&fit=crop"
                 alt="Aglaonema indoor plant in a white pot"
                 className="w-full h-full object-cover"
               />
